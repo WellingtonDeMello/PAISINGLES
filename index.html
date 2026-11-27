@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flag Quiz - Guess the Country</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game">
+
+        <!-- WELCOME SCREEN -->
+
+        <section id="welcome">
+
+            <div class="welcome-icon">🚩</div>
+
+            <h1 class="welcome-title">FLAG QUIZ</h1>
+
+            <h2>Guess the Country!</h2>
+
+            <p class="welcome-description">
+                Test your knowledge of world flags!
+            </p>
+
+            <div class="instructions">
+
+                <h3>HOW TO PLAY</h3>
+
+                <ul>
+                    <li>Look at the flag displayed on the screen.</li>
+                    <li>Check how many letters the country name has.</li>
+                    <li>Type the country name in English.</li>
+                    <li>Click SUBMIT ANSWER to check your answer.</li>
+                    <li>Get points for every correct answer!</li>
+                </ul>
+
+                <h3>RULES</h3>
+
+                <ul>
+                    <li>There are 10 questions.</li>
+                    <li>Each correct answer gives you 1 point.</li>
+                    <li>You cannot change your answer after submitting.</li>
+                    <li>Try to get the highest score!</li>
+                </ul>
+
+            </div>
+
+            <button id="startButton" type="button">
+                START GAME
+            </button>
+
+        </section>
+
+
+        <!-- QUIZ SCREEN -->
+
+        <section id="quiz" class="hidden">
+
+            <div class="top">
+
+                <h1>🚩 FLAG QUIZ</h1>
+
+                <div class="score">
+                    SCORE: <span id="score">0</span>
+                </div>
+
+            </div>
+
+            <div class="progress" id="progress">
+                QUESTION 1 / 10
+            </div>
+
+            <div class="flag-card">
+
+                <div class="flag" id="flag">
+
+                    <img
+                        src="https://flagcdn.com/w320/br.png"
+                        alt="Country flag"
+                    >
+
+                </div>
+
+                <h2>Which country is this?</h2>
+
+                <div class="letter-count" id="letterCount">
+                    6 LETTERS
+                </div>
+
+            </div>
+
+            <form id="answerForm">
+
+                <label for="answer">YOUR ANSWER</label>
+
+                <input
+                    type="text"
+                    id="answer"
+                    placeholder="Enter the country name..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="submitButton">
+                    SUBMIT ANSWER
+                </button>
+
+            </form>
+
+            <p class="feedback" id="feedback"></p>
+
+            <button
+                class="next hidden"
+                id="nextButton"
+                type="button"
+            >
+                NEXT QUESTION →
+            </button>
+
+        </section>
+
+
+        <!-- FINAL SCREEN -->
+
+        <section class="final hidden" id="final">
+
+            <div class="welcome-icon">🏆</div>
+
+            <h2>QUIZ COMPLETED!</h2>
+
+            <p id="finalScore"></p>
+
+            <button id="restartButton" type="button">
+                PLAY AGAIN
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
